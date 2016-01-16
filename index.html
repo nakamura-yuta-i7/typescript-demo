@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TypeScript Greeter</title>
+		<script src="node_modules/systemjs/dist/system.src.js"></script>
+		<style>
+		a {
+			color: blue;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- 2. Configure SystemJS -->
+		<!-- <script>
+			System.config({
+				packages: {        
+					app: {
+						format: 'register',
+						defaultExtension: 'js'
+					}
+				}
+			});
+			System.import('modules')
+						.then(null, console.error.bind(console));
+		</script> -->
+		<div id="greeter">
+			<script src="greeter.js"></script>
+		</div>
+		<ul class="samples">
+			<li><a src-path="basic_types/enum.js" onclick="sampleClick(this);">Basic Types: enum</a></li>
+			
+			<li><a src-path="modules/first_step.js" onclick="sampleClick(this);">modules: first step</a></li>
+			<li><a src-path="modules/adding_modularity.js" onclick="sampleClick(this);">modules: Adding Modularity</a></li>
+			<li><a src-path="modules/splitting_across_files.js" onclick="sampleClick(this);">modules: Splitting Across Files</a></li>
+			<li><a src-path="modules/Going_External/Going_External.js" onclick="sampleClick(this);">modules: Going External</a></li>
+			<li><a src-path="modules/Export/Export.js" onclick="sampleClick(this);">modules: Export</a></li>
+			<li><a src-path="modules/Alias/Alias.js" onclick="sampleClick(this);">modules: Alias</a></li>
+			
+			<li><a src-path="modules/Functions.js" onclick="sampleClick(this);">Functions: Functions</a></li>
+			<li><a src-path="modules/Function_Types.js" onclick="sampleClick(this);">Functions: Function Types</a></li>
+			<li><a src-path="modules/Writing_the_function_type.js" onclick="sampleClick(this);">Functions: Writing the function type</a></li>
+			<li><a src-path="modules/optional_and_default_parameters.js" onclick="sampleClick(this);">
+				Functions: Optional and Default Parameters</a></li>
+			<li><a src-path="modules/rest_parameters.js" onclick="sampleClick(this);">
+				Functions: Rest Parameters</a></li>
+			<li><a src-path="functions/lambdas_and_using_this.js" onclick="sampleClick(this);">
+				Functions: Lambdas and using 'this'</a></li>
+			<li><a src-path="functions/Overloads.js" onclick="sampleClick(this);">
+				Functions: Overloads</a></li>
+			
+			<li><a src-path="Generics/Generics.js" onclick="sampleClick(this);">
+				Generics</a></li>
+			
+			<li><a src-path="Mixin/sample.js" onclick="sampleClick(this);">
+				Mixin: sample</a></li>
+			
+			
+		</ul>
+		<div class="script-load-area"></div>
+		
+		<script>
+		function sampleClick(elem) {
+			var src = elem.getAttribute("src-path");
+			var js = document.createElement( 'script' );
+			js.src = src;
+			var area = document.getElementsByClassName('script-load-area')[0];
+			area.innerHTML = "";
+			area.appendChild(js);
+		}
+		</script>
+		
+	</body>
+</html>
